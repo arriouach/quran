@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quran_surah_group_user,quran_surah_group_user,model_quran_surah,base.group_user,1,1,1,1
+
+access_quran_aya_group_user,quran_aya_group_user,model_quran_aya,base.group_user,1,1,1,1
+
+access_quran_student_group_user,quran_student_group_user,model_quran_student,base.group_user,1,1,1,1
+
+access_quran_teacher_group_user,quran_teacher_group_user,model_quran_teacher,base.group_user,1,1,1,1
+
+access_quran_student_group_user,quran_student_group_user,model_quran_student,base.group_user,1,1,1,1
+
+access_quran_session_group_user,quran_session_group_user,model_quran_session,base.group_user,1,1,1,1

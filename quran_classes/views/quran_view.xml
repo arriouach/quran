@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<!-- ********************** -->
+		<!--		Root Menu		-->
+		<!-- ********************** -->
+        <menuitem id="quran_root_menu" name="Quran"/>
+
+		<!-- ********************** -->
+		<!--	 Setting Menu		-->
+		<!-- ********************** -->
+		<menuitem id="quran_setting_menu" parent="quran_classes.quran_root_menu" sequence="99" name="Settings"/>
+
+        <!-- ********************** -->
+        <!--	Personal Menu		-->
+        <!-- ********************** -->
+        <menuitem id="personal_root_menu" parent="quran_classes.quran_root_menu" name="Personal"/>
+
+        <!-- ********************** -->
+        <!--	Session Menu		-->
+        <!-- ********************** -->
+        <menuitem id="session_root_menu" parent="quran_classes.quran_root_menu" name="Sessions"/>
+
+		<!-- ********************** -->
+		<!--		Surah 			-->
+		<!-- ********************** -->
+        <record id="quran_surah_view_tree" model="ir.ui.view">
+	        <field name="name">Quran Surah</field>
+	        <field name="model">quran.surah</field>
+	        <field name="type">tree</field>
+	        <field name="arch" type="xml">
+				<tree  string="Quran Surah" editable="top">
+                    <field name="name"/>
+                    <field name="aya_nbr" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="quran_surah_action" model="ir.actions.act_window">
+			<field name="name">Quran Surah</field>
+			<field name="res_model">quran.surah</field>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="quran_surah_view_tree"/>
+		</record>
+
+        <menuitem id="quran_surah_menu" action="quran_surah_action" parent="quran_classes.quran_setting_menu" name="Surah"/>
+
+		<!-- ********************** -->
+		<!--		Aya 			-->
+		<!-- ********************** -->
+        <record id="quran_aya_view_tree" model="ir.ui.view">
+	        <field name="name">Quran Aya</field>
+	        <field name="model">quran.aya</field>
+	        <field name="type">tree</field>
+	        <field name="arch" type="xml">
+				<tree  string="Quran Aya" editable="top">
+                    <field name="name"/>
+                    <field name="nbr" />
+                    <field name="surah_id" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="quran_aya_action" model="ir.actions.act_window">
+			<field name="name">Quran Aya</field>
+			<field name="res_model">quran.aya</field>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="quran_aya_view_tree"/>
+		</record>
+
+        <menuitem id="quran_aya_menu" action="quran_aya_action" parent="quran_classes.quran_setting_menu" name="Aya"/>
+    </data>
+</odoo>

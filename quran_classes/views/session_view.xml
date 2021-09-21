@@ -104,10 +104,8 @@
         <record id="view_session_action" model="ir.actions.act_window">
             <field name="name">Sessions</field>
             <field name="res_model">quran.session</field>
-            <field name="view_id" ref="view_session_form"/>
-            <field name="view_mode">tree,form</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="target">new</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_session_tree"/>
         </record>
 
         <menuitem id="quran_session_menu" action="view_session_action" parent="quran_classes.session_root_menu" name="Sessions"/>

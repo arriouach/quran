@@ -88,10 +88,8 @@
         <record id="view_teacher_action" model="ir.actions.act_window">
             <field name="name">Teachers</field>
             <field name="res_model">quran.teacher</field>
-            <field name="view_id" ref="view_teacher_form"/>
-            <field name="view_mode">tree,form</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="target">new</field>
+            <field name="view_mode">form,tree</field>
+            <field name="view_id" ref="view_teacher_tree"/>
         </record>
 
         <menuitem id="quran_teacher_menu" action="view_teacher_action" parent="quran_classes.personal_root_menu" name="Teachers"/>
